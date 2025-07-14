@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>UAI Lab | 新闻</title>
+        <link rel="icon" type="image/png" href="img/icon.jpg">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+    </head>
+
+    <body>
+        <header class="navbar navbar-fixed-top" role="banner">
+            <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only">导航</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="index.html" class="navbar-brand">
+                    <img src="img/logo.jpg" width="60" height="30" alt="">
+                </a>
+                <a href="index.html" class="navbar-brand">UAI Lab</a>
+                <span class="hidden-sm hidden-xs navbar-split"></span>
+                <span class="hidden-sm hidden-xs navbar-subtitle">不确定性人工智能实验室</span>
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="news.html">中文</a></li>
+                    <li><a href="en/news.html">ENGLISH</a></li>
+                </ul>
+                <span class="hidden-sm hidden-xs navbar-split  navbar-right"></span>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="publications.html">论文</a></li>
+                    <li><a href="members.html">成员</a></li>
+                    <li><a href="news.html">新闻</a></li>
+                </ul>
+            </nav>
+            </div><!-- end of container -->
+        </header>
+
+        <div class="page">
+            <div class="container">
+                <h1 class="text-center"><b>近期新闻</b></h1>
+                <hr>
+                <div id="news">
+                <div class="container">
+                    <div class="news-block">
+                        <div class="news-header">
+                            <h3>LLM的幻觉有办法了！基于证据理论的不确定性刻画</h3>
+                            <p class="news-authors">马焕，陈靖东等</p>
+                        </div>
+                        <img src="img/news/LogTokU.png" alt="LogTokU" class="news-image">
+                        <p class="news-content">大语言模型（LLMs）常面临“幻觉”问题，输出不可靠信息。不确定性估计作为评估模型输出可靠性的关键指标，对于提升LLM可信度、支撑下游任务至关重要。然而，传统基于概率的不确定性估计方法难以有效捕捉生成响应的不确定性，在LLM场景中表现不佳。本文揭示了其失效的核心原因：概率方法在归一化过程中丢失了证据强度信息。基于此，提出LogTokU（Logits-induced Token Uncertainty）框架，通过利用LLM生成下一token的证据强度将不确定性建模为偶然不确定性（AU）和认知不确定性（EU），实时估计大模型不确定性。在动态解码和QA可靠性估计中显著优于传统方法，提升了LLM的可靠性，拓展了大模型不确定性应用范围，同时为多领域下游任务探索提供了新思路，已经受到麻省理工学院（MIT）、密歇根州立大学（MSU）等机构研究人员的关注。</p>
+                        <div class="news-links">
+                            <a href="https://arxiv.org/pdf/2502.00290">论文</a>
+                            <a href="https://github.com/MaHuanAAA/logtoku">代码</a>
+                            <a href="https://mp.weixin.qq.com/s/sbTg1662kqf78WPbFR8E8Q">报道</a>
+                        </div>
+                    </div>
+
+                    <div class="news-block">
+                        <div class="news-header">
+                            <h3>CVPR2025｜我们的脑信号，真的能忠实还原看到的画面吗？</h3>
+                            <p class="news-authors">吴海涛，李清等</p>
+                        </div>
+                        <img src="img/news/ubp.png" alt="UBP" class="news-image">
+                        <p class="news-content">尽管人类具备强大的感知与认知能力，但受限于注意力资源、视觉记忆容量等因素，当外部视觉刺激转化为脑信号时，部分信息不可避免地丢失，特别是那些高频细节。我们将这种由系统性加工处理造成的信息差距，称为&nbsp;System GAP。与此同时，认知和感知的动态性，以及技术采集噪声等因素，进一步加剧了信号与原始视觉刺激之间的差距，我们称之为&nbsp;Random GAP。这些因素共同导致了脑信号和视觉刺激的信息量不一致和模态差异，从而增加了图像与脑信号对齐的难度，影响模型泛化性能。在本研究中，我们提出了 不确定性感知模糊先验（UBP） 方法，旨在减缓视觉神经解码中 System GAP 和 Random GAP 导致的信息损失。实验结果表明，UBP在多个数据集上显著优于现有最先进方法。在 THING-EEG 数据集上，UBP实现了 Top-1 准确率提升 13.7% 和 Top-5 准确率提升 9.8%。本方法通过将不确定性感知和生物学先验引入视觉神经解码，为脑-机接口领域提供了新的研究视角。同时，UBP还为其他多模态任务提供了重要启示，尤其是在面对模态差距和信息不平衡的任务时。</p>
+                        <div class="news-links">
+                            <a href="https://arxiv.org/pdf/2503.04207">论文</a>
+                            <a href="https://github.com/HaitaoWuTJU/Uncertainty-aware-Blur-Prior">代码</a>
+                            <a href="https://mp.weixin.qq.com/s/p7Rn3o7x7Ly8u_YTpSw_Aw">报道</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    </body>
+</html>
